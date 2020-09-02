@@ -62,7 +62,7 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
     if (this.grid.cellsAvailable()) {
-        var value = Math.random() < 0.9 ? 1 : 5;
+        var value = Math.random() < 0.9 ? 1 : 2;
         var tile = new Tile(this.grid.randomAvailableCell(), value);
 
         this.grid.insertTile(tile);
@@ -163,8 +163,8 @@ GameManager.prototype.move = function (direction) {
 
                     if (merged.value > self.highestTile) self.highestTile = merged.value;
 
-                    // The mighty 20 Euro tile
-                    if (merged.value === 2000) self.won = true;
+                    // The mighty 10 Euro tile
+                    if (merged.value === 1000) self.won = true;
                 } else if (next && next.value === tile.value && !next.mergedFrom && next.value != 2 && next.value != 20 && next.value != 200 && next.value != 2000 && next.value != 20000 && next.value != 50000) {
  
                     var merged = new Tile(positions.next, tile.value * 2);
@@ -183,8 +183,8 @@ GameManager.prototype.move = function (direction) {
 
                     if (merged.value > self.highestTile) self.highestTile = merged.value;
 
-                    // The mighty 20 Euro tile
-                    if (merged.value === 2000) self.won = true;
+                    // TODO wincheck?
+                    if (merged.value === 1000) self.won = true;
                 } else if (!tile.merged) {
                     self.moveTile(tile, positions.farthest);
                 }
