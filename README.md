@@ -1,8 +1,8 @@
-20euros
+Game #35
 =======
 
-A 2048 variant with Euro coins and notes.
+A 20 Euros variant (yet another one).
 
-You'll find the game forum here: http://20euros.freeforums.net/
+You'll find the original game forum here: http://20euros.freeforums.net/
 
-Feel free to fork my version and make pull requests!
+Feel free to fork his version and make pull requests!
